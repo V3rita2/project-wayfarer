@@ -1,1 +1,7 @@
 # project-wayfarer
+
+
+
+
+
+Jared Stearne
