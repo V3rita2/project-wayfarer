@@ -1,5 +1,8 @@
 # project-wayfarer
 
+james-bell
+James Bell
+=======
 
 
 
@@ -11,3 +14,4 @@ Jared Stearne
 Maricela Duron
 Rose Belmont
 
+ main
