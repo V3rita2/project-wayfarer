@@ -19,4 +19,4 @@ class Park(models.Model):
     #no character limit to description, front end will cut off 1000 or more unless clicked on
     description = models.TextField
     created_at = models.DateTimeField(auto_now_add=True)
-    city = models.ForeignKey(City)
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
