@@ -55,13 +55,33 @@
   </div>
 </nav>
 
+
+<!--Profile title page, username display and location display-->
 <div class="jumbotron">
   <div class="container text-center">
     <h1>My Recent Posts</h1>      
-    <p>My Location, My Number of Posts</p>
+    <p>{{user.name}}[username here]</p> 
+    <p>{{user.location}} [my location here]</p>
   </div>
 </div>
-  
+<!--Profile title page, username display and location display-->
+
+
+<!-- BASIC LOOP TO DISPLAY POSTS (Park objects) FROM USER -->
+<!-- Need sample parks (posts) in order to design function-->
+<div class="gallery">
+  {% for park in parks %}
+  <a href="{% url 'park_detail' park.pk %}"> <!-- Link to park-detail page (TBD) -->
+    <div>
+      <img src="{{park.image}}" style="max-width: 200px; max-height: 200px;" alt="{{park.name}}" /> <!--thumbnail image of park-->
+      <div class="card-header-title">{{park.name}}</div> <!--name of park-->
+    </div>
+  </a>
+  {% endfor %}
+<!-- BASIC LOOP TO DISPLAY POSTS (Park objects) FROM USER -->
+
+
+
 <div class="container-fluid bg-3 text-center">    
   <h3>Recent</h3><br>
   <div class="row">
