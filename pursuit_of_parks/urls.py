@@ -22,6 +22,6 @@ urlpatterns = [
     #path for main app urls
     path('', include('main_app.urls')),
     # path for auth and logins
-    path('accounts/', include('django.contribs.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
     
 ]
