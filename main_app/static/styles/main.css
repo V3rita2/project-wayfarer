@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'wooden_logregular';
+    src: url('wooden-log.regular-webfont.woff2') format('woff2'),
+         url('wooden-log.regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-image: url("https://i.imgur.com/J2WoB5b.jpeg");
     background-position: center;
@@ -8,6 +16,7 @@ body {
 h1 {
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'wooden_logregular';
 }
 
 p {
