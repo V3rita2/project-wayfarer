@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -19,5 +20,7 @@ class Park(models.Model):
     #no character limit to description, front end will cut off 1000 or more unless clicked on
     description = models.TextField
     created_at = models.DateTimeField(auto_now_add=True)
-    
+    # allows a park to be connected to a city, all parks from a city will be deleted if the city is deleted
     city = models.ForeignKey(City, on_delete=models.CASCADE)
+    # Keeps track of the user that makes the post about the park
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
