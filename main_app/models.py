@@ -24,3 +24,11 @@ class Park(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     # Keeps track of the user that makes the post about the park
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+# A user model that calls the Django aouth user as a one to one, so users can have and change their locations, screen name, etc.
+class Person(models.Model):
+    #when user is deleted, delete the person attached to it
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    #display name will default to User.name, but can be changed without altering login credentials
+    display_name = models.CharField(max_length=256)
+    location = models.CharField(max_length=256)
