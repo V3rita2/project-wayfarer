@@ -24,3 +24,8 @@ class Park(models.Model):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
     # Keeps track of the user that makes the post about the park
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+# Model for Current City. Needs to be able to change by the user.
+class CurrentCity(models.Model):
+    
+    name = models.
