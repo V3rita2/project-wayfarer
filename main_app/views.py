@@ -27,7 +27,7 @@ class Signup(View):
     def get(self, request):
         form = UserCreationForm()
         context = {"form": form}
-        return render(request, "signup.html", context)
+        return render(request, "registration/signup.html", context)
     def post(self, request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -36,4 +36,4 @@ class Signup(View):
             return redirect("profile")
         else:
             context = {"form": form}
-            return render(request, "signup.html", context)
+            return render(request, "registration/signup.html", context)
