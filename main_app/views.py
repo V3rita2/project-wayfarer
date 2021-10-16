@@ -16,7 +16,7 @@ class Profile(TemplateView):
 
 #single post view for parks
 class Post(TemplateView):
-    template_name = "post.html"
+    template_name = "posts.html"
 
 #login view
 class Login(TemplateView):
