@@ -1,8 +1,6 @@
-
-
 {% extends 'base.html' %} {% block content %}
 
-
+<body class='signup'>
 <h1 class="title">Sign Up</h1>
 <main class="form-signin"></main>
 <form method="post" action="{% url 'signup' %}">
@@ -40,5 +38,6 @@
 
 </form>
 </main>
+</body>
 
 {% endblock %}

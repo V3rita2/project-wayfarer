@@ -1,20 +1,35 @@
 .home {
-    background-image: url("https://i.imgur.com/J2WoB5b.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("https://i.imgur.com/J2WoB5b.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .profile {
-    background-image: url("https://i.imgur.com/LoClY88.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("https://i.imgur.com/LoClY88.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .posts {
-    background-image: url("https://i.imgur.com/EXFT4Lt.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("https://i.imgur.com/EXFT4Lt.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
+
+.login {
+  background: linear-gradient(to bottom, #466900 0%, #A1C423 100%) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.signup {
+  background: linear-gradient(to bottom, #2E4500 0%, #7C4325 100%) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.update {
+  background: linear-gradient(to bottom right, #538757, #a7a56e, #8fa39c, #90713a, #b9c578) no-repeat center center fixed;
+  background-size: cover;
 }
 
 h1 {
@@ -25,7 +40,7 @@ h1 {
 p {
     color: white;
   
-mehari/signup
+/* mehari/signup */
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
