@@ -9,7 +9,7 @@ class City(models.Model):
     name = models.CharField(max_length=256)
     # Will also need a route to upload to
     image = models.ImageField(upload_to=None)
-    description = models.TextField
+    description = models.TextField(max_length=9999)
 
 #model for parks
 class Park(models.Model):
