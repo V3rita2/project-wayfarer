@@ -1,7 +1,35 @@
 .home {
+  height: 100vh;
   background-image: url("https://i.imgur.com/J2WoB5b.jpeg");
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
+  backdrop-filter: grayscale(40%);
+}
+
+.home-statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(128, 128, 128, 0.8);
+  border-radius: 5px;
+  padding: 10px 10px 0px 10px;
+  text-align: center;
+}
+
+.home-header {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+}
+
+.home-image {
+  position: fixed;
+  top: 70%;
+  left: 50%;
 }
 
 .profile {
