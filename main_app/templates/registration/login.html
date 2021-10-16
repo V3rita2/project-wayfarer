@@ -25,4 +25,9 @@
 
 </form>
 </main>
+{% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                <p style="color: azure">{{ error }}</p>
+            {% endfor %}
+      {% endif %}
 {% endblock %}
