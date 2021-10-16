@@ -1,16 +1,28 @@
-body {
+.home {
     background-image: url("https://i.imgur.com/J2WoB5b.jpeg");
-    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile {
+    background-image: url("https://i.imgur.com/LoClY88.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.posts {
+    background-image: url("https://i.imgur.com/EXFT4Lt.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 h1 {
     color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
 p {
     color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 20px;
 }
