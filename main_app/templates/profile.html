@@ -1,25 +1,28 @@
 {% extends 'base.html' %} {% block content %}
 
-<body class='profile'>
-
-
-<!--TEMPORARY Profile page, username display and location display-->
-<div class="jumbotron">
-  <div class="container text-center">
-    <h1>Profile: {{user.username}} <a href="{% url 'profile_update' user.pk %}">(edit)</a></h1> <!-- link to update form or bootstrap popup edit -->
-    <h2> Display Name: {{user.person.display_name}}  </h2>
-    <br>
-    <h2> Current City: {{user.person.location}} </h2><!--will be added to database soon -->
-    <br>
-    <h2 style="color: white;"> Joined: {{user.date_joined}} </h2><!--will be added to database soon -->
+<body class='profile' style="background-color: #527462;">
+  <br>
+<!--BIG DISPLAY card image-->
+<div class="card bg-dark text-white">
+  <img class="card-img" src="https://i.imgur.com/EXFT4Lt.jpeg" alt="Card image">
+  <div class="card-img-overlay">
+    <h5 style="color: #527462" class="card-title">Welcome {{user.username}} <a href="{% url 'profile_update' user.pk %}"> 
+    <!-- Bootstrap EDIT icon --> 
+     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+        <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+      </svg>  
+    <!-- Bootstrap EDIT icon -->
+    </a></h5>
+    <p style="color: #527462" class="card-text">Display Name: {{user.person.display_name}} </p>
+    <p style="color: #527462" class="card-text">Current City: {{user.person.location}} </p>
+    <p style="color: #527462" class="card-text">Joined: {{user.date_joined}} </p>
   </div>
 </div>
-<!--Profile title page, username display and location display-->
+<!--WIDE card image-->
 
 
 
-<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') FROM LOGGED IN USER -->
-<!-- Need sample parks (posts) in order to design function-->
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') NOT FUNCTIONING YET -->
 <div class="gallery">
   {% for park in parks %}
   <a href="{% url 'park_detail' park.pk %}"> <!-- Link to park-detail page (TBD) -->
@@ -29,67 +32,99 @@
     </div>
   </a>
   {% endfor %}
-<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') FROM LOGGED IN USER -->
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') NOT FUNCTIONING YET -->
+
+<br>
+<br>
+
+<h3 style="color: #D5DCDC;">Recent Parks</h3>
+<!-- HARD-CODED PARK CARDS FOR WIREFRAME EXAMPLE -->
+<!-- Card One (Park/Post 1) -->
+      <div class="card mb-3" style="max-width: 800px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">San Francisco</h5>
+              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Card Two (Park/Post 2) -->
+      <div class="card mb-3" style="max-width: 800px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Austin</h5>
+              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Card Three (Park/Post 3) -->
+      <div class="card mb-3" style="max-width: 800px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Seattle</h5>
+              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Card Four (Park/Post 4) -->
+      <div class="card mb-3" style="max-width: 800px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Los Angeles</h5>
+              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p class="card-text"><small class="text-muted">Last updated 11 days ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Card Five (Park/Post 5) -->
+      <div class="card mb-3" style="max-width: 800px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Denver</h5>
+              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p class="card-text"><small class="text-muted">Last updated 14 days ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+<!-- TEST CARDS FOR WIREFRAME -->
 
 
-<br><br><br>
 
-
-<!-- DUMMY DATA: Placeholder data for styling parks. Temporary -->
-<div class="container-fluid bg-3 text-center"> <!-- bootstrap responsive flex grid -->
-  <h1>My Recently Visited Parks</h1><br>
-  <div class="row">
-    <div class="col-sm-2"> <!-- bootstrap styling -->
-      <p>San Francisco</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2"> 
-      <p>London</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2"> 
-      <p>Gibraltr</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Los Angeles</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Boston</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div><br>
-
-<div class="container-fluid bg-3 text-center"> <!-- bootstrap responsive flex grid -->
-  <div class="row">
-    <div class="col-sm-2">
-      <p>Austin</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2"> 
-      <p>Montreal</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Chicago</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>New Orleans</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-2">
-      <p>Portland</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div>
-<!-- DUMMY DATA: Placeholder for styling parks (last ten) -->
-
-<br><br><br>
-<button type="button" class="btn btn-secondary">Next 10</button>
+<br><!--Next 10 button (required in MVP)-->
+<button type="button" style="width: 200px; color:#527462; background-color: #D5DCDC;" class="btn btn-secondary">Next 10</button>
 
 {% endblock %}
 
