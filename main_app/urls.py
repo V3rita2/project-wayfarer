@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.Home.as_view(), name="home"), 
     #path for profile page 
     path('profile/', views.Profile.as_view(), name="profile"),
-    
+    path('profile/<int:pk>/update/', views.ProfileUpdate.as_view(), name="profile_update"),
     #path for single post about a park page
     #need to come back to update route
     path('posts/', views.Post.as_view(), name="posts"),

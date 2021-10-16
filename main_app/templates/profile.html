@@ -3,16 +3,15 @@
 <body class='profile'>
 
 
-
 <!--TEMPORARY Profile page, username display and location display-->
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Profile: {{user.username}}</h1> <!-- link to update form or bootstrap popup edit -->
-    Display Name: {{user.display_name}} 
+    <h1>Profile: {{user.username}} <a href="{% url 'profile_update' user.pk %}">(edit)</a></h1> <!-- link to update form or bootstrap popup edit -->
+    <h2> Display Name: {{user.display_name}}  </h2>
     <br>
-    Current City: {{user.location}} <!--will be added to database soon -->
+    <h2> Current City: {{user.location}} </h2><!--will be added to database soon -->
     <br>
-    Joined: {{user.date_joined}} <!--will be added to database soon -->
+    <h2 style="color: white;"> Joined: {{user.date_joined}} </h2><!--will be added to database soon -->
   </div>
 </div>
 <!--Profile title page, username display and location display-->
