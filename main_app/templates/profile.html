@@ -7,15 +7,19 @@
 <!--TEMPORARY Profile page, username display and location display-->
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>My Recent Posts</h1>      
-    <p>{{user.name}}[username here]</p> 
-    <p>{{user.location}} [my location here]</p>
+    <h1>Profile: {{user.username}}</h1> <!-- link to update form or bootstrap popup edit -->
+    Display Name: {{user.display_name}} 
+    <br>
+    Current City: {{user.location}} <!--will be added to database soon -->
+    <br>
+    Joined: {{user.date_joined}} <!--will be added to database soon -->
   </div>
 </div>
 <!--Profile title page, username display and location display-->
 
 
-<!-- BASIC LOOP TO DISPLAY POSTS (Park objects) FROM USER -->
+
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') FROM LOGGED IN USER -->
 <!-- Need sample parks (posts) in order to design function-->
 <div class="gallery">
   {% for park in parks %}
@@ -26,56 +30,67 @@
     </div>
   </a>
   {% endfor %}
-<!-- BASIC LOOP TO DISPLAY POSTS (Park objects) FROM USER -->
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') FROM LOGGED IN USER -->
+
 
 <br><br><br>
 
-<!--Placeholder (dummy) parks-->
-<div class="container-fluid bg-3 text-center">    
-  <h3>Recent</h3><br>
+
+<!-- DUMMY DATA: Placeholder data for styling parks. Temporary -->
+<div class="container-fluid bg-3 text-center"> <!-- bootstrap responsive flex grid -->
+  <h1>My Recently Visited Parks</h1><br>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-2"> <!-- bootstrap styling -->
       <p>San Francisco</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-3"> 
+    <div class="col-sm-2"> 
       <p>London</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-3"> 
+    <div class="col-sm-2"> 
       <p>Gibraltr</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
       <p>Los Angeles</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-2">
+      <p>Boston</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
 </div><br>
 
-<div class="container-fluid bg-3 text-center">    
+<div class="container-fluid bg-3 text-center"> <!-- bootstrap responsive flex grid -->
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-2">
       <p>Austin</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-3"> 
+    <div class="col-sm-2"> 
       <p>Montreal</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
       <p>Chicago</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
-    <div class="col-sm-3">
+    <div class="col-sm-2">
       <p>New Orleans</p>
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-2">
+      <p>Portland</p>
       <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
     </div>
   </div>
 </div>
-<!--Placeholder (dummy) parks-->
+<!-- DUMMY DATA: Placeholder for styling parks (last ten) -->
 
-
+<br><br><br>
+<button type="button" class="btn btn-secondary">Next 10</button>
 
 {% endblock %}
 
