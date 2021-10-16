@@ -31,12 +31,14 @@
   top: 70%;
   left: 50%;
 }
-
+/* Comment out to edit Profile page background to "card"
 .profile {
   background-image: url("https://i.imgur.com/LoClY88.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+*/
+
 
 .posts {
   background-image: url("https://i.imgur.com/EXFT4Lt.jpeg");
