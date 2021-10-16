@@ -7,9 +7,9 @@
 <div class="jumbotron">
   <div class="container text-center">
     <h1>Profile: {{user.username}} <a href="{% url 'profile_update' user.pk %}">(edit)</a></h1> <!-- link to update form or bootstrap popup edit -->
-    <h2> Display Name: {{user.display_name}}  </h2>
+    <h2> Display Name: {{user.person.display_name}}  </h2>
     <br>
-    <h2> Current City: {{user.location}} </h2><!--will be added to database soon -->
+    <h2> Current City: {{user.person.location}} </h2><!--will be added to database soon -->
     <br>
     <h2 style="color: white;"> Joined: {{user.date_joined}} </h2><!--will be added to database soon -->
   </div>
