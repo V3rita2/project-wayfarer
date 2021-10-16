@@ -7,15 +7,19 @@
 <!--TEMPORARY Profile page, username display and location display-->
 <div class="jumbotron">
   <div class="container text-center">
-    <h1>Profile: {{user.username}}</h1>      
-    {{person.display_name}} (Change Display Name)<!-- link to update form -->
+    <h1>Profile: {{user.username}}</h1> <!-- link to update form or bootstrap popup edit -->
+    Display Name: {{user.display_name}} 
+    <br>
+    Current City: {{user.location}} <!--will be added to database soon -->
+    <br>
+    Joined: {{user.date_joined}} <!--will be added to database soon -->
   </div>
 </div>
 <!--Profile title page, username display and location display-->
 
 
 
-<!-- BASIC LOOP TO DISPLAY POSTS (Park objects) FROM USER -->
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') FROM LOGGED IN USER -->
 <!-- Need sample parks (posts) in order to design function-->
 <div class="gallery">
   {% for park in parks %}
@@ -26,13 +30,13 @@
     </div>
   </a>
   {% endfor %}
-<!-- BASIC LOOP TO DISPLAY POSTS (Park objects) FROM USER -->
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') FROM LOGGED IN USER -->
 
 
 <br><br><br>
 
 
-<!-- DUMMY DATA: Placeholder for styling parks-->
+<!-- DUMMY DATA: Placeholder data for styling parks. Temporary -->
 <div class="container-fluid bg-3 text-center"> <!-- bootstrap responsive flex grid -->
   <h1>My Recently Visited Parks</h1><br>
   <div class="row">
