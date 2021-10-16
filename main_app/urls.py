@@ -15,6 +15,4 @@ urlpatterns = [
     #path for user to sign-up/register
     path('signup/', views.Signup.as_view(), name="signup"),
     
-    
-    
 ]
