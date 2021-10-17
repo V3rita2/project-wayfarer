@@ -10,22 +10,41 @@
     background-size: cover;
 }
 
-.posts {
-    background-image: url("https://i.imgur.com/EXFT4Lt.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.posts{
+  background: #89A68F;
+  background: linear-gradient(
+    90deg,
+    #3A887C 0%,
+    #527462 40%,
+    #C0C49B 100%
+  );
 
 }
 
+.card-body{
+  display:inline-block;
+  border-radius: 5%;
+  font-size:20px;
+  cursor:pointer;
+  color: black;
+  background-color:#7D8D87;
+}
+
+.card-title{
+  color:black
+}
+ 
+
 h1 {
-    color: white;
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  text-align: center;
 }
 
 p {
     color: white;
   
-mehari/signup
+
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -58,8 +77,4 @@ mehari/signup
     border-top-right-radius: 0;
   }
    */
-=======
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-    font-size: 20px;
-}
 
