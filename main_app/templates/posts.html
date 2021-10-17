@@ -1,13 +1,29 @@
-{% extends 'base.html' %} {% block content %}
-
+ {% extends 'base.html' %} {% block content %}
+ {%load static%} 
 <body class="posts">
   <!-- Header for the Posts page. -->
   <h1>Pursuit of Posts</h1>
+    <!--
   <br />
   <h2>{{post.title}} [Title of post]</h2>
   <h3>{{post.user.name}} [Name of User who made the post]</h3>
   <br />
-  <p>{{post.body}} [Body of the post]</p>
+  <p>{{post.body}} [Body of the post]</p> -->
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="post-card">
+        <div class="card-body">
+          <h5 class="card-title">{{park.name}} [Title of post]</h5>
+          <h5 class="user-name">{{user.username}} </h5>
+         <!-- adding random image until we can get data to show -->
+          <img src="https://threebestrated.com/images/GrandPark-LosAngeles-CA.jpeg" alt="park" />
+          <p class="card-text">{{park.description}} [Body of the post........................]</p>
+        </div>
+      </div>
+    </div>
+
+
 </body>
 
 {% endblock %}

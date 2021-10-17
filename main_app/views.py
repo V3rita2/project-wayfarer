@@ -16,10 +16,12 @@ class Home(TemplateView):
 #profile view
 class Profile(TemplateView):
     template_name = "profile.html"
+    
 
 #single post view for parks
 class Post(TemplateView):
     template_name = "posts.html"
+   
 
 #login view
 class Login(TemplateView):
