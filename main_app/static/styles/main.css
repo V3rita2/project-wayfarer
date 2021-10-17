@@ -1,14 +1,44 @@
 .home {
-    background-image: url("https://i.imgur.com/J2WoB5b.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: 100vh;
+  background-image: url("https://i.imgur.com/J2WoB5b.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+  backdrop-filter: grayscale(40%);
 }
 
-.profile {
-    background-image: url("https://i.imgur.com/LoClY88.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.home-statement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(128, 128, 128, 0.8);
+  border-radius: 5px;
+  padding: 10px 10px 0px 10px;
+  text-align: center;
 }
+
+.home-header {
+  position: fixed;
+  top: 15%;
+  left: 15%;
+}
+
+.home-image {
+  position: fixed;
+  top: 70%;
+  left: 50%;
+}
+/* Comment out to edit Profile page background to "card"
+.profile {
+  background-image: url("https://i.imgur.com/LoClY88.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+*/
+
 
 .posts{
   background: #89A68F;
@@ -34,6 +64,31 @@
   color:black
 }
  
+.posts {
+  background-image: url("https://i.imgur.com/EXFT4Lt.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.login {
+  background: linear-gradient(to bottom, #466900 0%, #A1C423 100%) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.signup {
+  background: linear-gradient(to bottom, #2E4500 0%, #7C4325 100%) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.update {
+  background: linear-gradient(to bottom right, #538757, #a7a56e, #8fa39c, #90713a, #b9c578) no-repeat center center fixed;
+  background-size: cover;
+}
+.signup-page, .login-page {
+  background: linear-gradient(to right, #3a887c, #c0c49b);
+    
+  }
 
 h1 {
   color: white;
@@ -43,17 +98,16 @@ h1 {
 
 p {
     color: white;
-  
-
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
-/* .form-signin {
+.form-signin {
     width: 100%;
-    max-width: 330px;
+    max-width: 430px;
     padding: 15px;
     margin: auto;
+    
     
   }
   
@@ -66,15 +120,36 @@ p {
   }
   
   .form-signin input[type="text"] {
-    margin-bottom: -1px;
+    margin-bottom: 20px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
-  
+  .form-signin input[type="email"] {
+    margin-bottom: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
   .form-signin input[type="password"] {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    padding: 10px;
   }
-   */
+  .signup-error {
+    color: rgb(164, 12, 12);
+  }
+  #signup-title, #login-title {
+    position: relative;
+    display: flex;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: #d5dcdc;
+    
+  }
+  
+  /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-size: 20px;
+} */
 
