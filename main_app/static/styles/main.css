@@ -64,12 +64,6 @@
   color:black
 }
  
-.posts {
-  background-image: url("https://i.imgur.com/EXFT4Lt.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
 
 .login {
   background: linear-gradient(to bottom, #466900 0%, #A1C423 100%) no-repeat center center fixed;
