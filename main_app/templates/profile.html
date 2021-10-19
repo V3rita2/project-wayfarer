@@ -2,20 +2,28 @@
 
 <body class='profile' style="background-color: #527462;">
   <br>
+
+<!--Font import-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+<!--Font import-->
+
+
 <!--BIG DISPLAY card image-->
 <div class="card bg-dark text-white">
   <img class="card-img" src="https://i.imgur.com/EXFT4Lt.jpeg" alt="Card image">
   <div class="card-img-overlay">
-    <h5 style="color: #527462" class="card-title">Welcome {{user.username}} <a href="{% url 'profile_update' user.pk %}"> 
+    <h5 style="color: #527462; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Welcome {{user.username}} <a href="{% url 'profile_update' user.pk %}"> 
     <!-- Bootstrap EDIT icon --> 
      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
         <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
       </svg>  
     <!-- Bootstrap EDIT icon -->
     </a></h5>
-    <p style="color: #527462" class="card-text">Display Name: {{user.person.display_name}} </p>
-    <p style="color: #527462" class="card-text">Current City: {{user.person.location}} </p>
-    <p style="color: #527462" class="card-text">Joined: {{user.date_joined}} </p>
+    <p style="color: #527462; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Display Name: {{user.person.display_name}} </p>
+    <p style="color: #527462; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Current City: {{user.person.location}} </p>
+    <p style="color: #527462; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Joined: {{user.date_joined}} </p>
   </div>
 </div>
 <!--WIDE card image-->
@@ -42,14 +50,14 @@
 <!-- Card One (Park/Post 1) -->
       <div class="card mb-3" style="max-width: 800px;">
         <div class="row no-gutters">
-          <div class="col-md-4">
-            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+          <div class="col-md-4"><!--280px max-width is about right to make viewable on mobile devices. Not perfectly responsive but IS mobile/web friendly! -->
+            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">San Francisco</h5>
-              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
+            <div class="card-body-alt">
+              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">San Francisco</h5>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
             </div>
           </div>
         </div>
@@ -59,13 +67,13 @@
       <div class="card mb-3" style="max-width: 800px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Austin</h5>
-              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
+            <div class="card-body-alt">
+              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Austin</h5>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
             </div>
           </div>
         </div>
@@ -75,13 +83,13 @@
       <div class="card mb-3" style="max-width: 800px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Seattle</h5>
-              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
+            <div class="card-body-alt">
+              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Seattle</h5>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
             </div>
           </div>
         </div>
@@ -91,13 +99,13 @@
       <div class="card mb-3" style="max-width: 800px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Los Angeles</h5>
-              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p class="card-text"><small class="text-muted">Last updated 11 days ago</small></p>
+            <div class="card-body-alt">
+              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Los Angeles</h5>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 11 days ago</small></p>
             </div>
           </div>
         </div>
@@ -107,13 +115,13 @@
       <div class="card mb-3" style="max-width: 800px;">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img style="margin:25px; outline-style: solid; outline-color: #527462;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
+            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
           </div>
           <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Denver</h5>
-              <p style="color:black" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p class="card-text"><small class="text-muted">Last updated 14 days ago</small></p>
+            <div class="card-body-alt">
+              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Denver</h5>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
+              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 14 days ago</small></p>
             </div>
           </div>
         </div>
