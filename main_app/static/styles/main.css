@@ -59,6 +59,10 @@
   color: black;
   background-color:#7D8D87;
 }
+.card-body-alt {
+  /*for styles on Profile page so they won't conflict with posts. */
+}
+
 
 .card-title{
   color:black
