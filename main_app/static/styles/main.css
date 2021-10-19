@@ -52,19 +52,22 @@
 }
 
 .card-body{
-  display:inline-block;
+  display:inline-block; 
   border-radius: 5%;
-  font-size:20px;
+  font-size:100px;
   cursor:pointer;
-  color: black;
+  color: black; 
   background-color:#7D8D87;
+
 }
 
 .card-title{
   color:black
 }
  
-
+.post-img{
+  
+}
 .login {
   background: linear-gradient(to bottom, #466900 0%, #A1C423 100%) no-repeat center center fixed;
   background-size: cover;
