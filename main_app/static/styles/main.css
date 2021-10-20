@@ -35,7 +35,6 @@
 }
 
 .update_area {
-  display: flex;
   justify-content: center;
   background: #C0C49B;
   padding: 50px;
