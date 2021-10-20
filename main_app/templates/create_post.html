@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<body class="create_post">
+  
+<h1 class="pt-3">Create a Post</h1>
+
+
+
+    
+<form action="" method="post">
+  {% csrf_token %} {{form.as_p}} <input type="submit" value="Plant Post" />
+</form>
+
+</body>
+
+
+{% endblock %}

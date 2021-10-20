@@ -14,5 +14,6 @@ urlpatterns = [
     path('login/', views.Login.as_view(), name="login"),
     #path for user to sign-up/register
     path('signup/', views.Signup.as_view(), name="signup"),
-    
+    #path for creating a post about a park park
+    path('create_post/', views.Create_Post.as_view(), name="create_post"),
 ]

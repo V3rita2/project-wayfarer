@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import UpdateView # , CreateView, DeleteView
+from django.views.generic.edit import UpdateView, CreateView #, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from sre_compile import _SUCCESS_CODES
@@ -20,6 +20,12 @@ class Profile(TemplateView):
 #single post view for parks
 class Post(TemplateView):
     template_name = "posts.html"
+
+#create a post page for a park
+class Create_Post(CreateView):
+    model = Park
+    fields=["name", "description", "city", "user"]
+    template_name = "create_post.html"
 
 #login view
 class Login(TemplateView):

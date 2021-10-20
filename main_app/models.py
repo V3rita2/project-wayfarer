@@ -18,7 +18,7 @@ class Park(models.Model):
     #upload_to will have to have a route dedicated to it, possibly have a few for posting.
     image = models.ImageField(upload_to=None)
     #no character limit to description, front end will cut off 1000 or more unless clicked on
-    description = models.TextField
+    description = models.TextField(max_length=9999)
     created_at = models.DateTimeField(auto_now_add=True)
     # allows a park to be connected to a city, all parks from a city will be deleted if the city is deleted
     city = models.ForeignKey(City, on_delete=models.CASCADE)
