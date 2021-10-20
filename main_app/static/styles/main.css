@@ -27,10 +27,41 @@
   background-size: cover;
 }
 
-.update {
-  background: linear-gradient(to bottom right, #538757, #a7a56e, #8fa39c, #90713a, #b9c578) no-repeat center center fixed;
+/* This section is for the update page. */
+.update_page {
+  background: #D5DCDC;
   background-size: cover;
+  
 }
+
+.update_area {
+  display: flex;
+  justify-content: center;
+  background: #C0C49B;
+  padding: 50px;
+  border-radius: 25px;
+  margin-top: 250px;
+}
+
+.update_form {
+  display: flex;
+  justify-content: center;
+  background: #3A887C;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 25px;
+  align-items: center;
+}
+
+.update_button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/* This concludes the update page section */
+
+
 
 h1 {
     color: white;
