@@ -1,13 +1,31 @@
-{% extends 'base.html' %} {% block content %}
-
+ {% extends 'base.html' %} {% block content %}
+ {%load static%} 
 <body class="posts">
   <!-- Header for the Posts page. -->
   <h1>Pursuit of Posts</h1>
+    <!--
   <br />
   <h2>{{post.title}} [Title of post]</h2>
   <h3>{{post.user.name}} [Name of User who made the post]</h3>
   <br />
-  <p>{{post.body}} [Body of the post]</p>
+  <p>{{post.body}} [Body of the post]</p> -->
+
+  
+    <div class="card" style="width: 50rem; height: 50rem; border-radius: 5%;  align-items:center; cursor:pointer;
+    background-color:#7D8D87; text-align: center; margin: 0 auto; float: none; margin-bottom: 10px;
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    transition: all .55s ease-in-out;
+    ">
+      <div class="card-body">
+         <!-- random text until we get data to show -->
+         <h5 class="card-title" style="color:#D5DCDC;"">{{park.name}}Los Angeles</h5>
+         <h5 class="user-name">{{user.username}} </h5>
+        <!-- adding random image until we can get data to show -->
+       <img class="post-img" style="border-radius: 17%; padding: 50px;" src="https://threebestrated.com/images/GrandPark-LosAngeles-CA.jpeg" alt="park" />
+         <h5 class="card-text" style="color:#D5DCDC; font-family: Gill Sans, sans-serif;"">{{park.description}}This is just text to fill up space!!! Tacos! Margaritas! Micheladas! Apples and Bananas!!!rawr blah fdfdjfh jdgdhgdgh fdgfjdgh fg fdgfhgfjhgfgbfjgbfjgbfjghfg,dfjghfgfdg;ldfgfdjhg jfghfgfgfhdg fdjgfd herhe r duthrt rht rhgf dgh dthts i sdfh djfh jghfgdf ;gfjrhtr fghghfg fk gfdfgfgfdgfg fgfrjthr tsjdfhdgfd </h5>
+      </div>
+    </div>
+
 </body>
 
 {% endblock %}

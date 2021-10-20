@@ -1,33 +1,32 @@
 {% extends 'base.html' %} {% block content %}
 
+<body class="login-page">
+<h1 class="title" id="login-title">Log In</h1>
+<main class="form-signin">
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-floating">
+            <input type="text" name="username" class="form-control" required id="id_username" id="floatingInput"
+                placeholder="Username">
+            
 
-<h1 class="title">Log In</h1>
-<main class="form-signin"></main>
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
+        </div>
+        <div class="form-floating">
+            <input type="password" class="form-control" name="password" id="floatingPassword" required id="id_password"
+                placeholder="Password">
+            
+        </div>
 
-    <div class="form-floating">
-       
-        <input type="text" name="username" class="form-control" required id="id_username" id="floatingInput"
-            placeholder="Username">
-        <label for="floatingInput">Username</label>
+        <button type="submit" class="w-100 btn btn-lg btn-primary" value="login">Submit</button>
+        <input type="hidden" name="next" value="{{ next }}" />
 
-    </div>
-    <div class="form-floating">
-        
-        <input type="password" class="form-control" name="password" id="floatingPassword" required id="id_password"
-            placeholder="Password">
-        <label for="floatingPassword" class="form-label">Password</label>
-    </div>
-
-    <button type="submit" class="w-100 btn btn-lg btn-primary" value="login">Submit</button>
-    <input type="hidden" name="next" value="{{ next }}" />
-
-</form>
+    </form>
 </main>
 {% if form.non_field_errors %}
-            {% for error in form.non_field_errors %}
-                <p style="color: rgb(240, 44, 63)">{{ error }}</p>
-            {% endfor %}
-      {% endif %}
+{% for error in form.non_field_errors %}
+<p style="color: rgb(222, 101, 113); text-align: center;">{{ error }}</p>
+{% endfor %}
+{% endif %}
+
+</body>
 {% endblock %}
