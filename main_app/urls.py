@@ -12,8 +12,9 @@ urlpatterns = [
     path('posts/', views.Post.as_view(), name="posts"),
     #path to login- might need to update route later
     path('login/', views.Login.as_view(), name="login"),
-    #path for user to sign-up/register
+    #paths for user to sign-up/register
     path('signup/', views.Signup.as_view(), name="signup"),
+    path('signup/userlink', views.UserLink.as_view(), name="user_link"),
     #path for city list page
     path('cities/', views.CityList.as_view(), name='cities'),
     #path for single city page
