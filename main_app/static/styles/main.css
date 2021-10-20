@@ -128,7 +128,7 @@ p {
     padding: 10px;
   }
   .signup-error {
-    color: rgb(222, 101, 113);
+    color: rgb(237, 93, 107);
   }
   #signup-title, #login-title {
     position: relative;
@@ -138,6 +138,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     color: #d5dcdc;
+    padding-top: 200px;
     
   }
   

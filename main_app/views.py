@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import UpdateView # , CreateView, DeleteView
+from django.views.generic.edit import UpdateView, CreateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import DetailView
 from sre_compile import _SUCCESS_CODES
 from .models import City, Park, Person
 
@@ -42,9 +43,26 @@ class Signup(View):
         else:
             context = {"form": form}
             return render(request, "registration/signup.html", context)
+#signup 2 electric boogaloo
+class UserLink(CreateView):
+    model = Person
+    fields = ['display_name', 'location']
+    template_name = 'user_link.html'
+    success_url = '/profile'
 
 class ProfileUpdate(UpdateView):
     model = Person
     fields = ['display_name', 'location']
     template_name = 'profile_update.html'
     success_url = '/profile/'
+
+
+
+# city views, for list and detail, list first, then detail
+class CityList(TemplateView):
+    template_name = 'city_list.html'
+
+#city detail view
+class CityDetail(DetailView):
+    model = City
+    template_name = "city_detail.html"
