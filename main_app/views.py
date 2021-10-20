@@ -48,3 +48,7 @@ class ProfileUpdate(UpdateView):
     fields = ['display_name', 'location']
     template_name = 'profile_update.html'
     success_url = '/profile/'
+
+# city views, for list and detail, list first, then detail
+class CityList(TemplateView):
+    template_name = 'city_list.html'
