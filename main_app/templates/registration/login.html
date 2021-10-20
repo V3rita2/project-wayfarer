@@ -1,22 +1,35 @@
 {% extends 'base.html' %} {% block content %}
 
-<h1 class="title">Log In</h1>
-<form method="post" action="{% url 'login' %}">
-  {% csrf_token %} 
-  
-  <div class="mb-3">
-    <label  class="form-label">Username</label>
-    <input type="text" name="username" class="form-control" required id="id_username" >
-    
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" name="password" id="exampleInputPassword1" required id="id_password">
-  </div>
-  
-  <button type="submit" class="btn btn-primary" value="login">Submit</button>
-  <input type="hidden" name="next" value="{{ next }}" />
+<body class='login'>
+    <h1 class="title">Log In</h1>
+    <main class="form-signin"></main>
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
 
-</form>
+        <div class="form-floating">
+        
+            <input type="text" name="username" class="form-control" required id="id_username" id="floatingInput"
+                placeholder="Username">
+            <label for="floatingInput">Username</label>
 
+        </div>
+        <div class="form-floating">
+            
+            <input type="password" class="form-control" name="password" id="floatingPassword" required id="id_password"
+                placeholder="Password">
+            <label for="floatingPassword" class="form-label">Password</label>
+        </div>
+
+        <button type="submit" class="w-100 btn btn-lg btn-primary" value="login">Submit</button>
+        <input type="hidden" name="next" value="{{ next }}" />
+
+    </form>
+    </main>
+    {% if form.non_field_errors %}
+                {% for error in form.non_field_errors %}
+                    <p style="color: rgb(240, 44, 63)">{{ error }}</p>
+                {% endfor %}
+        {% endif %}
+</body>
 {% endblock %}
+
