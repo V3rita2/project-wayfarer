@@ -5,6 +5,7 @@ from django.views.generic.base import TemplateView
 from django.views.generic.edit import UpdateView # , CreateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.views.generic import DetailView
 from sre_compile import _SUCCESS_CODES
 from .models import City, Park, Person
 
@@ -52,3 +53,8 @@ class ProfileUpdate(UpdateView):
 # city views, for list and detail, list first, then detail
 class CityList(TemplateView):
     template_name = 'city_list.html'
+
+#city detail view
+class CityDetail(DetailView):
+    model = City
+    template_name = "city_detail.html"

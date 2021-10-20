@@ -15,6 +15,8 @@ urlpatterns = [
     #path for user to sign-up/register
     path('signup/', views.Signup.as_view(), name="signup"),
     #path for city list page
-    path('cities/', views.CityList.as_view(), name='cities')
+    path('cities/', views.CityList.as_view(), name='cities'),
+    #path for single city page
+    path('cities/<int:pk>', views.CityDetail.as_view(), name='city_detail'),
     
 ]
