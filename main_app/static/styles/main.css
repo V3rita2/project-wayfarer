@@ -139,6 +139,9 @@ p {
     padding-top: 200px;
     
   }
+  .city-list {
+    background: linear-gradient(to right, #3a887c, #c0c49b);
+  }
   
   /* text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
     font-size: 20px;
