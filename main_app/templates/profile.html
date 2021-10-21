@@ -14,7 +14,7 @@
 <div class="card bg-dark text-white">
   <img class="card-img" src="https://i.imgur.com/EXFT4Lt.jpeg" alt="Card image">
   <div class="card-img-overlay">
-    <h5 style="color: black; font-size: 3em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none; background: rgba(128, 128, 128, 0.3); 
+    <h5 style="color: rgb(255, 255, 255); font-size: 3em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none; background: rgba(128, 128, 128, 0.5); 
     " class="card-title">Welcome {{user.username}} <a href="{% url 'profile_update' user.pk %}"> 
     <!-- Bootstrap EDIT icon --> 
      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
@@ -22,9 +22,9 @@
       </svg>  
     <!-- Bootstrap EDIT icon -->
     </a></h5>
-    <p style="color: #000000; background: rgba(128, 128, 128, 0.3); font-size: 2em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Display Name: {{user.person.display_name}} </p>
-    <p style="color: #000000; background: rgba(128, 128, 128, 0.3);font-size: 1.7em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Current City: {{user.person.location}} </p>
-    <p style="color: #000000; background: rgba(128, 128, 128, 0.3);font-size: 1.3em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Joined: {{user.date_joined}} </p>
+    <p style="color: #ffffff; background: rgba(128, 128, 128, 0.5); font-size: 2em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Display Name: {{user.person.display_name}} </p>
+    <p style="color: #ffffff; background: rgba(128, 128, 128, 0.5);font-size: 1.7em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Current City: {{user.person.location}} </p>
+    <p style="color: #ffffff; background: rgba(128, 128, 128, 0.5);font-size: 1.3em; text-align: center; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Joined: {{user.date_joined}} </p>
   </div>
 </div>
 <!--WIDE card image-->
