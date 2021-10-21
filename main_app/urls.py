@@ -24,5 +24,7 @@ urlpatterns = [
     #path for editing a park post need to confirm path with team 
     path('cities/<int:pk>/update',
          views.PostUpdate.as_view(), name="post_update"),
+    path('cities/<int:pk>/delete',
+         views.PostDelete.as_view(), name="post_delete"),
 
 ]
