@@ -1,8 +1,8 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import UpdateView, CreateView, DeleteView
+from django.views.generic.edit import UpdateView, CreateView, UpdateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import DetailView
@@ -28,6 +28,19 @@ class Create_Post(CreateView):
     model = Park
     fields=["name", "description", "city", "user"]
     template_name = "create_post.html"
+
+#edit post view- front end needs to create post_update.html
+class PostUpdate(UpdateView):
+    model = Park
+    fields=["name", "image", "description", "city", "user"]
+    template_name = "post_update.html"
+    #front end needs to create post_detail.html
+    def get_success_url(self):
+        return reverse('post_detail', kwargs={'pk': self.object.pk})
+
+
+
+
 
 
 #login view
