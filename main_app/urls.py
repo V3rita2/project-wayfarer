@@ -19,5 +19,7 @@ urlpatterns = [
     path('cities/', views.CityList.as_view(), name='cities'),
     #path for single city page
     path('cities/<int:pk>', views.CityDetail.as_view(), name='city_detail'),
-    
+    #path for creating a post about a park park
+    path('create_post/', views.Create_Post.as_view(), name="create_post"),
+
 ]
