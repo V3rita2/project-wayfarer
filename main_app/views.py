@@ -22,7 +22,13 @@ class Profile(TemplateView):
 #single post view for parks
 class Post(TemplateView):
     template_name = "posts.html"
-   
+
+#create a post page for a park
+class Create_Post(CreateView):
+    model = Park
+    fields=["name", "description", "city", "user"]
+    template_name = "create_post.html"
+
 
 #login view
 class Login(TemplateView):
