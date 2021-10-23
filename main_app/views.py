@@ -85,6 +85,11 @@ class ProfileUpdate(UpdateView):
 class CityList(TemplateView):
     template_name = 'city_list.html'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) 
+        context["citys"] = City.objects.all()
+        return context
+
 #city detail view
 class CityDetail(DetailView):
     model = City
