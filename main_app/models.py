@@ -10,6 +10,9 @@ class City(models.Model):
     # Will also need a route to upload to
     image = models.ImageField(upload_to=None)
     description = models.TextField(max_length=9999)
+    
+    def __str__(self):
+        return self.name
 
 #model for parks
 class Park(models.Model):
