@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import UpdateView, CreateView, UpdateView
+from django.views.generic.edit import UpdateView, CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import DetailView
@@ -29,7 +29,7 @@ class Create_Post(CreateView):
     fields=["name", "description", "city", "user"]
     template_name = "create_post.html"
 
-#edit post view- front end needs to create post_update.html
+#edit post view- front end needs to create post_update.html 
 class PostUpdate(UpdateView):
     model = Park
     fields=["name", "image", "description", "city", "user"]
@@ -38,7 +38,11 @@ class PostUpdate(UpdateView):
     def get_success_url(self):
         return reverse('post_detail', kwargs={'pk': self.object.pk})
 
-
+#delete post vire- front ends needs to create post_delete_confirmation.html or actually not sure how this would work since we're using modal for pop-up?? 
+class PostDelete(DeleteView):
+    model = Park
+    template_name = "post_delete_confirmation.html"
+    success_url = "/cities/"
 
 
 
