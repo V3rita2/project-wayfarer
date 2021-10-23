@@ -1,24 +1,48 @@
 {% extends 'base.html' %} {% block content %}
 
+<body style='
+background: conic-gradient(rgb(132,166,98), rgb(175,117,65), rgb(132,166,98)) no-repeat center center fixed;
+background-size: cover;
+'>
+  <h1 style="text-align: center">{{city.name}}</h1>
+  <img 
+  style='
+  height: auto;
+  width: auto;
+  max-height: 500px;
+  max-width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  ' 
+  src="{{city.image}}" 
+  />
+  <br/>
+  <p style="
+  text-align: center;
+  background: rgba(128, 128, 128, 0.8);
+  border-radius: 5px;
+  ">
+  Welcome to <span style="color: blue">{{city.name}}</span>!<br/>{{city.description}}</p>
 
-    <h1 style="text-align: center;">{{city.name}}</h1>
-    <img src={{city.image}}>
-    Welcome to <span style="color: blue;">{{city.name}}!</span>
-
-    {{city.description}}
-
-
-    {% for park in parks %}
-    <a href="{% url 'park_detail' park.pk %}" style="text-decoration: none;">
-      <div class="card anchor " style="width: 18rem; padding: 20px; margin: 20px; background: linear-gradient(to right, #18413b, #c0c49b);">
-        <img src="{{park.image}}" class="card-img-top" alt="{{city.name}}">
-        <div class="card-body">
-          <h5 class="card-title" style="color: black;">{{city.name}}</h5>
-          <p class="card-text">{{city.description}}</p>
-        </div>
+  {% for park in parks %}
+  <a href="{% url 'park_detail' park.pk %}" style="text-decoration: none">
+    <div
+      class="card anchor"
+      style="
+        width: 18rem;
+        padding: 20px;
+        margin: 20px;
+        background: linear-gradient(to right, #18413b, #c0c49b);
+      "
+    >
+      <img src="{{park.image}}" class="card-img-top" alt="{{city.name}}" />
+      <div class="card-body">
+        <h5 class="card-title" style="color: black">{{city.name}}</h5>
+        <p class="card-text">{{city.description}}</p>
       </div>
-    </a>
-    
-    {% endfor %}
+    </div>
+  </a>
+</body>
 
-    {% endblock %}
+{% endfor %} {% endblock %}

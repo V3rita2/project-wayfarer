@@ -7,6 +7,7 @@ name = "pypi"
 psycopg2-binary = "*"
 django = "*"
 pillow = "*"
+django-password-strength = "*"
 
 [dev-packages]
 
