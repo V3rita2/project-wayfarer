@@ -86,7 +86,7 @@
     <div class="row" style="color: transparent;">
       
       {% for city in citys %}
-      <a href="/posts" style="text-decoration: none;">
+      <a href="{% url 'city_detail' city.pk %}" style="text-decoration: none;">
         <div class="card anchor " style="width: 18rem; padding: 20px; margin: 20px; background: linear-gradient(to right, #18413b, #c0c49b);">
           <img src="{{city.image}}" class="card-img-top" alt="{{city.name}}">
           <div class="card-body">
