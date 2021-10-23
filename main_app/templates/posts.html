@@ -25,6 +25,25 @@
          <h5 class="card-text" style="color:#D5DCDC; font-family: Gill Sans, sans-serif;"">{{park.description}}This is just text to fill up space!!! Tacos! Margaritas! Micheladas! Apples and Bananas!!!rawr blah fdfdjfh jdgdhgdgh fdgfjdgh fg fdgfhgfjhgfgbfjgbfjgbfjghfg,dfjghfgfdg;ldfgfdjhg jfghfgfgfhdg fdjgfd herhe r duthrt rht rhgf dgh dthts i sdfh djfh jghfgdf ;gfjrhtr fghghfg fk gfdfgfgfdgfg fgfrjthr tsjdfhdgfd </h5>
       </div>
     </div>
+    <a class="button is-dark" href="{% url 'create_post' %}">Add Post</a>
+
+    <div class="row" style="color: transparent;">
+
+      {% for park in parks %}
+      <a href="/posts" style="text-decoration: none;">
+        <div class="card anchor "
+          style="width: 18rem; padding: 20px; margin: 20px; background: linear-gradient(to right, #18413b, #c0c49b);">
+          <img src="{{park.image}}" class="card-img-top" alt="{{park.name}}">
+          <div class="card-body">
+            <h5 class="card-title" style="color: black;">{{park.name}}</h5>
+            <p class="card-text ">{{park.description}}</p>
+          </div>
+        </div>
+      </a>
+  
+      {% endfor %}
+  
+    </div>
 
 </body>
 

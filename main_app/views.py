@@ -23,11 +23,17 @@ class Profile(TemplateView):
 class Post(TemplateView):
     template_name = "posts.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) 
+        context["parks"] = Park.objects.all()
+        return context
+
 #create a post page for a park
 class Create_Post(CreateView):
     model = Park
-    fields=["name", "description", "city", "user"]
+    fields=["name", "image", "description", "city", "user"]
     template_name = "create_post.html"
+    success_url="/posts/"
 
 #edit post view- front end needs to create post_update.html 
 class PostUpdate(UpdateView):

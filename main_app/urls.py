@@ -20,7 +20,7 @@ urlpatterns = [
     #path for single city page
     path('cities/<int:pk>', views.CityDetail.as_view(), name='city_detail'),
     #path for creating a post about a park park
-    path('create_post/', views.Create_Post.as_view(), name="create_post"),
+    path('posts/new', views.Create_Post.as_view(), name="create_post"),
     #path for editing a park post need to confirm path with team 
     path('cities/<int:pk>/update',
          views.PostUpdate.as_view(), name="post_update"),
