@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'pursuit_of_parks.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'wayfarer',
+        'NAME': 'new',
     }
 }
 
