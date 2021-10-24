@@ -10,59 +10,68 @@ from sre_compile import _SUCCESS_CODES
 from .models import City, Park, Person
 
 # Create your views here.
-#homepage view 
+# homepage view
+
+
 class Home(TemplateView):
     template_name = "home.html"
 
-#profile view
+# profile view
+
+
 class Profile(TemplateView):
     template_name = "profile.html"
-    
 
-#single post view for parks
+
+# single post view for parks
 class Post(TemplateView):
     template_name = "posts.html"
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs) 
-        context["parks"] = Park.objects.all()
-        return context
+    
 
-#create a post page for a park
+# create a post page for a park
+
+
 class Create_Post(CreateView):
     model = Park
-    fields=["name", "image", "description", "city", "user"]
+    fields = ["name", "image", "description", "city", "user"]
     template_name = "create_post.html"
-    success_url="/posts/"
+    success_url = "/cities/"
 
-#edit post view- front end needs to create post_update.html 
+# edit post view- front end needs to create post_update.html
+
+
 class PostUpdate(UpdateView):
     model = Park
-    fields=["name", "image", "description", "city", "user"]
+    fields = ["name", "image", "description", "city", "user"]
     template_name = "post_update.html"
-    #front end needs to create post_detail.html
+    # front end needs to create post_detail.html
+
     def get_success_url(self):
         return reverse('post_detail', kwargs={'pk': self.object.pk})
 
-#delete post vire- front ends needs to create post_delete_confirmation.html or actually not sure how this would work since we're using modal for pop-up?? 
+# delete post vire- front ends needs to create post_delete_confirmation.html or actually not sure how this would work since we're using modal for pop-up??
+
+
 class PostDelete(DeleteView):
     model = Park
     template_name = "post_delete_confirmation.html"
     success_url = "/cities/"
 
 
-
-
-#login view
+# login view
 class Login(TemplateView):
     template_name = "login.html"
-    
-#sign-up view- Mehari is working on sign-up page
+
+# sign-up view- Mehari is working on sign-up page
+
+
 class Signup(View):
     def get(self, request):
         form = UserCreationForm()
         context = {"form": form}
         return render(request, "registration/signup.html", context)
+
     def post(self, request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -72,12 +81,15 @@ class Signup(View):
         else:
             context = {"form": form}
             return render(request, "registration/signup.html", context)
-#signup 2 electric boogaloo
+# signup 2 electric boogaloo
+
+
 class UserLink(CreateView):
     model = Person
     fields = ['display_name', 'location']
     template_name = 'user_link.html'
     success_url = '/profile'
+
 
 class ProfileUpdate(UpdateView):
     model = Person
@@ -86,17 +98,27 @@ class ProfileUpdate(UpdateView):
     success_url = '/profile/'
 
 
-
 # city views, for list and detail, list first, then detail
 class CityList(TemplateView):
     template_name = 'city_list.html'
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs) 
+        context = super().get_context_data(**kwargs)
         context["citys"] = City.objects.all()
         return context
 
-#city detail view
+# city detail view
+
+
 class CityDetail(DetailView):
     model = City
     template_name = "city_detail.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["parks"] = Park.objects.all()
+        return context
