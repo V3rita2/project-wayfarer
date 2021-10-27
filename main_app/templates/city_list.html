@@ -34,6 +34,12 @@
       text-decoration: none;
     }
 
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
   </style>
 
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -46,10 +52,10 @@
       <div class="carousel-item active"
         style="background-image:url(https://cdn.getyourguide.com/img/tour/5cb0930abe8e9.jpeg/146.jpg);">
         <div class="carousel-caption d-none d-md-block">
-          <a href="#">
+         
             <h2>Los Angeles</h2>
             <p>something something something something something something something something</p>
-          </a>
+            <a href="#" class="btn btn-lg btn-dark">Visit</a>
         </div>
       </div>
       <div class="carousel-item "
@@ -57,7 +63,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h2>San Francisco</h2>
           <p>something something something something something something something something</p>
-          <a href="#" class="btn btn-lg btn-primary">Click</a>
+          <a href="#" class="btn btn-lg btn-dark">Visit</a>
         </div>
       </div>
       <div class="carousel-item "
@@ -65,7 +71,7 @@
         <div class="carousel-caption d-none d-md-block">
           <h2>Austin</h2>
           <p>something something something something something something something something</p>
-          <a href="#" class="btn btn-lg btn-primary">Click</a>
+          <a href="#" class="btn btn-lg btn-dark">Visit</a>
         </div>
       </div>
     </div>
@@ -82,24 +88,25 @@
 
 
 
-    <!-- card rectangle -->
-    <div class="row" style="color: transparent;">
-      
-      {% for city in citys %}
-      <a href="{% url 'city_detail' city.pk %}" style="text-decoration: none;">
-        <div class="card anchor " style="width: 18rem; padding: 20px; margin: 20px; background: linear-gradient(to right, #18413b, #c0c49b);">
-          <img src="{{city.image}}" class="card-img-top" alt="{{city.name}}">
-          <div class="card-body">
-            <h5 class="card-title" style="color: black;">{{city.name}}</h5>
-            <p class="card-text">{{city.description}}</p>
-          </div>
+  <!-- card rectangle -->
+  <div class="row" style="color: transparent;">
+
+    {% for city in citys %}
+    <a href="{% url 'city_detail' city.pk %}" style="text-decoration: none;">
+      <div class="card anchor "
+        style="width: 18rem; padding: 20px; margin: 20px; background: linear-gradient(to right, #18413b, #c0c49b);">
+        <img src="{{city.image}}" class="card-img-top" alt="{{city.name}}">
+        <div class="card-body">
+          <h5 class="card-title" style="color: black;">{{city.name}}</h5>
+          <p class="card-text ">{{city.description}}</p>
         </div>
-      </a>
-      
-      {% endfor %}
-      
-    </div>
-    
+      </div>
+    </a>
+
+    {% endfor %}
+
+  </div>
+
 
 </body>
 {% endblock %}
