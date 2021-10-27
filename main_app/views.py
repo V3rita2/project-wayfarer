@@ -39,11 +39,7 @@ class Post(TemplateView):
 
 class Create_Post(CreateView):
     model = Park
-<<<<<<< HEAD
-    fields=["name", "image", "description", "city", "user"]
-=======
     fields = ["name", "image", "description", "city", "user"]
->>>>>>> 5572dc69522dbc5afb51c31da0d80937672b3e7f
     template_name = "create_post.html"
     success_url = "/cities/"
 
@@ -67,12 +63,8 @@ class PostDelete(DeleteView):
     template_name = "post_delete_confirmation.html"
     success_url = "/cities/"
 
-<<<<<<< HEAD
-#login view
-=======
 
 # login view
->>>>>>> 5572dc69522dbc5afb51c31da0d80937672b3e7f
 class Login(TemplateView):
     template_name = "login.html"
 
