@@ -10,6 +10,41 @@
 <!--Font import-->
 
 
+<!-- same styles as city_list.html -->
+<style>
+  .carousel-item {
+    height: 32rem;
+    background: black;
+    color: white;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .anchor:hover {
+    transform: scale(1.05);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06); */
+    text-decoration: none;
+  }
+
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+</style>
+<!-- same styles as city_list.html -->
+
+
 <!--BIG DISPLAY card image-->
 <div class="card bg-dark text-white">
   <img class="card-img" src="https://i.imgur.com/EXFT4Lt.jpeg" alt="Card image">
@@ -29,41 +64,28 @@
   </div>
 </div>
 <!--WIDE card image-->
-
-
-
-
-
 <br>
 <br>
+<h1>Previous Parks</h1>
 
 
 
-
-
-<!--NEW LOOP TEST -->
-<!--NEW LOOP TEST -->
-<!--NEW LOOP TEST -->
-
-
-
-
-<div class="row" style="color: transparent;">
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') -->
+<div class="gallery">
   {% for park in parks %}
-  {{park.name}}
-
-    {% endfor %}
-
-  </div>
-
-
-<!--NEW LOOP TEST -->
-<!--NEW LOOP TEST -->
-<!--NEW LOOP TEST -->
-
-
-
-
+  <a href="#" style="text-decoration: none;"> <!-- link to post_detail.html when it's done! -->
+    <div class="card anchor"
+      style="width: 18rem; padding: 20px; margin: 20px; background:#c0c49b;">
+      <h5 class="card-title" style="color: black;">{{park.name}}</h5>
+      <img src="{{park.image}}" class="card-img-top" alt="{{park.name}}">
+      <div class="card-body">
+        <h5 class="card-title" style="color: black;">{{city.name}}</h5>
+        <p class="card-text ">{{park.description}}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') -->
 
 
 <br><!--Next 10 button (required in MVP)-->
