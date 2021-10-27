@@ -34,7 +34,8 @@ background-size: cover;
       <!-- Bootstrap ADD POST icon --> 
 
   {% for park in parks %}
-  <a href="{% url 'park_detail' park.pk %}" style="text-decoration: none">
+<div class="row">
+  <!-- <a href="" style="text-decoration: none"> -->
     <div
       class="card anchor"
       style="
@@ -44,13 +45,16 @@ background-size: cover;
         background: linear-gradient(to right, #18413b, #c0c49b);
       "
     >
-      <img src="{{park.image}}" class="card-img-top" alt="{{city.name}}" />
+      <img src="{{park.image}}" class="card-img-top" alt="{{park.name}}" />
       <div class="card-body">
-        <h5 class="card-title" style="color: black">{{city.name}}</h5>
-        <p class="card-text">{{city.description}}</p>
+        <h5 class="card-title" style="color: black">{{park.name}}</h5>
+        <p class="card-text"><small class="text-muted">By: {{park.user}}</small></p>
+        <p class="card-text">{{park.description}}</p>
       </div>
     </div>
-  </a>
+  <!-- </a> -->
+  </div>
+  
 </body>
 
 {% endfor %} {% endblock %}
