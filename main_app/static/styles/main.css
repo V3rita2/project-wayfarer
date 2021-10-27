@@ -156,3 +156,17 @@ p {
   max-width: 250px;
   padding-right: 15px;
 }
+
+/* This section is for the update page. */
+.update_page {
+  background: #D5DCDC;
+  background-size: cover;
+}
+
+.update_area {
+  justify-content: center;
+  background: #C0C49B;
+  padding: 50px;
+  border-radius: 25px;
+  margin-top: 250px;
+}
