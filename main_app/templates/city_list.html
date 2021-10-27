@@ -82,6 +82,7 @@
 
 
 
+<<<<<<< Updated upstream
     <!-- card rectangle -->
     <div class="row" style="color: transparent;">
       
@@ -93,6 +94,19 @@
             <h5 class="card-title" style="color: black;">{{city.name}}</h5>
             <p class="card-text">{{city.description}}</p>
           </div>
+=======
+  <!-- card rectangle -->
+  <div class="row" style="color: transparent;">
+
+    {% for city in citys %}
+    <a href="{% url 'city_detail' city.pk %}" style="text-decoration: none;">
+      <div class="card anchor "
+        style="width: 18rem; padding: 20px; margin: 20px; background:#c0c49b;">
+        <img src="{{city.image}}" class="card-img-top" alt="{{city.name}}">
+        <div class="card-body">
+          <h5 class="card-title" style="color: black;">{{city.name}}</h5>
+          <p class="card-text ">{{city.description}}</p>
+>>>>>>> Stashed changes
         </div>
       </a>
       
