@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 # Create your models here.
 
 # model for the city pages, will be hardcoded
@@ -28,10 +29,22 @@ class Park(models.Model):
     # Keeps track of the user that makes the post about the park
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+
+
 # A user model that calls the Django aouth user as a one to one, so users can have and change their locations, screen name, etc.
 class Person(models.Model):
     #when user is deleted, delete the person attached to it
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     #display name will default to User.name, but can be changed without altering login credentials
-    display_name = models.CharField(max_length=256)
-    location = models.CharField(max_length=256)
+    display_name = models.CharField(max_length=256, default='EnjoyerOfParks')
+    location = models.CharField(max_length=256, default='Some Park')
+
+    def __str__(self):
+        return self.user.username
+
+# must save AFTER creation, so post_save
+@ receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Person.objects.create(user=instance)
+# when user object is created, create a Person instance
