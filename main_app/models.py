@@ -19,7 +19,7 @@ class Park(models.Model):
 
     name = models.CharField(max_length=256)
     #upload_to will have to have a route dedicated to it, possibly have a few for posting.
-    image = models.CharField(max_length=500)
+    image = models.CharField(max_length=9999)
     #no character limit to description, front end will cut off 1000 or more unless clicked on
     description = models.TextField(max_length=9999)
     created_at = models.DateTimeField(auto_now_add=True)
