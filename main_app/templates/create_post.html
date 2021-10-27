@@ -4,16 +4,10 @@
   
 <h1 class="pt-3">Create A Post</h1>
 
-
-
-    
-<form style='
-
-' 
-action="" 
-method="post"
->
-  {% csrf_token %} {{form.as_p}} <input type="submit" value="Plant Post" />
+<form action="" method="post">
+  {% csrf_token %} 
+  {{form.as_p}}
+   <input type="submit" value="submit" />
 </form>
 
 </body>
