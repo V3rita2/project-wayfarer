@@ -1,17 +1,22 @@
 {% extends 'base.html' %} {% block content %}
 
-<body class="update">
-  
-<h1 class="pt-3">Update {{user.username}}</h1>
-
-
-
-    
-<form action="" method="post">
-  {% csrf_token %} {{form.as_p}} <input type="submit" value="Submit" />
-</form>
-
+<body class="update_page">
+  <div class="update_area">
+    <div class="header">
+      <h1>Update Information for: {{user.username}}</h1>
+      <div class="update_form">
+        <form action="" method="post">
+          {% csrf_token %} {{form.as_p}}
+        <div class = "update button"></div>
+          <input type="submit" value="Update Profile" />
+      </div>
+    </div>
+  </div>
 </body>
 
-
 {% endblock %}
+
+
+  
+
+

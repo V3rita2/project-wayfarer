@@ -37,6 +37,11 @@ class Profile(TemplateView):
 # single post view for parks
 class Post(TemplateView):
     template_name = "posts.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) 
+        context["parks"] = Park.objects.all()
+        return context
 
     
 
