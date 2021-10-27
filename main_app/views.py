@@ -22,6 +22,12 @@ class Home(TemplateView):
 class Profile(TemplateView):
     template_name = "profile.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["parks"] = Park.objects.all()
+        return context
+
+
 
 # single post view for parks
 class Post(TemplateView):

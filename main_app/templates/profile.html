@@ -32,105 +32,37 @@
 
 
 
-<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') NOT FUNCTIONING YET -->
-<div class="gallery">
+
+
+<br>
+<br>
+
+
+
+
+
+<!--NEW LOOP TEST -->
+<!--NEW LOOP TEST -->
+<!--NEW LOOP TEST -->
+
+
+
+
+<div class="row" style="color: transparent;">
   {% for park in parks %}
-  <a href="{% url 'park_detail' park.pk %}"> <!-- Link to park-detail page (TBD) -->
-    <div>
-      <img src="{{park.image}}" style="max-width: 200px; max-height: 200px;" alt="{{park.name}}" /> <!--thumbnail image of park-->
-      <div class="card-header-title">{{park.name}}</div> <!--name of park-->
-    </div>
-  </a>
-  {% endfor %}
-<!-- BASIC LOOP TO DISPLAY POSTS ('Parks') NOT FUNCTIONING YET -->
+  {{park.name}}
 
-<br>
-<br>
+    {% endfor %}
 
-<h3 style="color: #D5DCDC;">Recent Parks</h3>
-<!-- HARD-CODED PARK CARDS FOR WIREFRAME EXAMPLE -->
-<!-- Card One (Park/Post 1) -->
-     <a href="/posts"><div class="card mb-3" style="max-width: 800px;">
-        <div class="row no-gutters">
-          <div class="col-md-4"><!--280px max-width is about right to make viewable on mobile devices. Not perfectly responsive but IS mobile/web friendly! -->
-            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body-alt">
-              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">San Francisco</h5>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 2 days ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </a> 
+  </div>
 
-<!-- Card Two (Park/Post 2) -->
-      <div class="card mb-3" style="max-width: 800px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body-alt">
-              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Austin</h5>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-<!-- Card Three (Park/Post 3) -->
-      <div class="card mb-3" style="max-width: 800px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body-alt">
-              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Seattle</h5>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 4 days ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
+<!--NEW LOOP TEST -->
+<!--NEW LOOP TEST -->
+<!--NEW LOOP TEST -->
 
-<!-- Card Four (Park/Post 4) -->
-      <div class="card mb-3" style="max-width: 800px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body-alt">
-              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Los Angeles</h5>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 11 days ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-<!-- Card Five (Park/Post 5) -->
-      <div class="card mb-3" style="max-width: 800px;">
-        <div class="row no-gutters">
-          <div class="col-md-4">
-            <img style="margin:15px; outline-style: solid; outline-color: #527462; max-width: 280px;"  src="https://www.tripsavvy.com/thmb/kzV5euHush-Ys7K-Dj0YJa-C86A=/1250x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tripsavvy_ggpark_1-df1c3293393d441b97f76fc3218f072e.jpg"  class="card-img" alt="park">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body-alt">
-              <h5 style="color: #527462; padding-left: 30px; padding-top: 20px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-title">Denver</h5>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text">Orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...</p>
-              <p style="color: #527462; padding-left: 30px; font-weight: bold; font-family: 'Roboto', sans-serif; text-shadow: none;" class="card-text"><small class="text-muted">Last updated 14 days ago</small></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-<!-- TEST CARDS FOR WIREFRAME -->
+
 
 
 
