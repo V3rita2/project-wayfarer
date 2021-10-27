@@ -16,6 +16,11 @@ from .models import City, Park, Person
 class Home(TemplateView):
     template_name = "home.html"
 
+
+# about view
+class About(TemplateView):
+    template_name = "about.html"
+
 # profile view
 
 
