@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect
 from django.views import View
 from django.http import HttpResponse
 from django.views.generic.base import TemplateView
@@ -8,6 +8,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import DetailView
 from sre_compile import _SUCCESS_CODES
 from .models import City, Park, Person
+from django.urls import reverse
 
 # Create your views here.
 # homepage view
@@ -29,7 +30,10 @@ class Post(TemplateView):
 
     
 
-# create a post page for a park
+
+
+
+
 
 
 class Create_Post(CreateView):
@@ -38,6 +42,9 @@ class Create_Post(CreateView):
     template_name = "create_post.html"
     success_url = "/cities/"
 
+    # def get_success_url(self):
+    #     return reverse('city_detail', kwargs={'pk': City.pk})
+
 # edit post view- front end needs to create post_update.html
 
 
@@ -45,10 +52,11 @@ class PostUpdate(UpdateView):
     model = Park
     fields = ["name", "image", "description", "city", "user"]
     template_name = "post_update.html"
+    success_url = "/cities/"
     # front end needs to create post_detail.html
 
-    def get_success_url(self):
-        return reverse('post_detail', kwargs={'pk': self.object.pk})
+    # def get_success_url(self):
+    #     return reverse('city_detail', kwargs={'pk': self.object.pk})
 
 # delete post vire- front ends needs to create post_delete_confirmation.html or actually not sure how this would work since we're using modal for pop-up??
 

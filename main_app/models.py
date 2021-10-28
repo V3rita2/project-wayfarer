@@ -24,9 +24,12 @@ class Park(models.Model):
     description = models.TextField(max_length=9999)
     created_at = models.DateTimeField(auto_now_add=True)
     # allows a park to be connected to a city, all parks from a city will be deleted if the city is deleted
-    city = models.ForeignKey(City, on_delete=models.CASCADE)
+    city = models.ForeignKey(City, on_delete=models.CASCADE, related_name="parks")
     # Keeps track of the user that makes the post about the park
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
 
 # A user model that calls the Django aouth user as a one to one, so users can have and change their locations, screen name, etc.
 class Person(models.Model):

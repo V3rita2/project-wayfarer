@@ -5,8 +5,7 @@ background: conic-gradient(rgb(132,166,98), rgb(175,117,65), rgb(132,166,98)) no
 background-size: cover;
 '>
   <h1 style="text-align: center">{{city.name}}</h1>
-  <img 
-  style='
+  <img style='
   height: auto;
   width: auto;
   max-height: 500px;
@@ -15,46 +14,57 @@ background-size: cover;
   margin-left: auto;
   margin-right: auto;
   border-radius: 5px;
-  ' 
-  src="{{city.image}}" 
-  />
-  <br/>
+  ' src="{{city.image}}" />
+  <br />
   <p style="
   text-align: center;
   background: rgb(93,67,46);
   border-radius: 5px;
   ">
-  Welcome to <span style="color: blue">{{city.name}}</span>!<br/>{{city.description}}</p>
+    Welcome to <span style="color: blue">{{city.name}}</span>!<br />{{city.description}}</p>
 
-    <!-- Bootstrap ADD POST icon --> 
-    <a href="{% url 'create_post' %}"> 
-    <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square-fill" viewBox="0 0 16 16">
-      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z"/>
-    </svg><p id='createpost' style="color: white;"> Add New Park</p>
-      <!-- Bootstrap ADD POST icon --> 
+  <!-- Bootstrap ADD POST icon -->
+  <a href="{% url 'create_post' %}">
+    <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+      class="bi bi-plus-square-fill" viewBox="0 0 16 16">
+      <path
+        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 1 0z" />
+    </svg>
+    <p id='createpost' style="color: white;"> Add New Park</p>
+  </a>
+  <!-- Bootstrap ADD POST icon -->
 
   {% for park in parks %}
-<div class="row">
-  <!-- <a href="" style="text-decoration: none"> -->
-    <div
-      class="card anchor"
-      style="
+  <div class="row">
+    <!-- <a href="" style="text-decoration: none"> -->
+    <div class="card anchor" style="
         width: 18rem;
         padding: 20px;
         margin: 20px;
         background: linear-gradient(to right, #18413b, #c0c49b);
-      "
-    >
+      ">
       <img src="{{park.image}}" class="card-img-top" alt="{{park.name}}" />
       <div class="card-body">
         <h5 class="card-title" style="color: black">{{park.name}}</h5>
         <p class="card-text"><small class="text-muted">By: {{park.user}}</small></p>
         <p class="card-text">{{park.description}}</p>
+       
+          
+          <a href="{% url 'post_update' park.pk %}" >
+           
+            edit
+           
+          </a>
+          <a href="{% url 'post_delete' park.pk %}"> delete</a> 
+           
+         
+        
       </div>
     </div>
-  <!-- </a> -->
+    <!-- </a> -->
+
   </div>
-  
+
 </body>
 
 {% endfor %} {% endblock %}
