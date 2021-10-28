@@ -33,6 +33,9 @@ class Park(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        ordering = ['created_at']
+
 
 # A user model that calls the Django aouth user as a one to one, so users can have and change their locations, screen name, etc.
 class Person(models.Model):

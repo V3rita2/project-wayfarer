@@ -73,7 +73,7 @@
 <!-- BASIC LOOP TO DISPLAY POSTS ('Parks') -->
 <div class="gallery">
   {% for park in parks %}
-  <a href="#" style="text-decoration: none;"> <!-- link to post_detail.html when it's done! -->
+  <a href="{% url 'posts' park.pk %}" style="text-decoration: none;"> <!-- link to post_detail.html when it's done! -->
     <div class="card anchor"
       style="width: 18rem; padding: 20px; margin: 20px; background:#c0c49b;">
       <h5 class="card-title" style="color: black;">{{park.name}}</h5>
