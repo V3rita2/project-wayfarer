@@ -11,7 +11,7 @@ urlpatterns = [
     path('profile/<int:pk>/update/', views.ProfileUpdate.as_view(), name="profile_update"),
     #path for single post about a park page
     #need to come back to update route
-    path('posts/<int:pk>/', views.Post.as_view(), name="posts"),
+    path('posts/<int:pk>/', views.Park_Detail.as_view(), name="posts"),
     #path to login- might need to update route later
     path('login/', views.Login.as_view(), name="login"),
     #paths for user to sign-up/register
@@ -28,7 +28,7 @@ urlpatterns = [
          views.PostUpdate.as_view(), name="post_update"),
     path('cities/<int:pk>/delete',
          views.PostDelete.as_view(), name="post_delete"),
-    path('park_detail/<int:pk>',
-         views.Park_Detail.as_view(), name="posts"),
+    # path('park_detail/<int:pk>',
+    #     views.Park_Detail.as_view(), name="posts"), # this is the one that's hitting right now
 
 ]

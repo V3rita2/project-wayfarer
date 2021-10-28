@@ -10,23 +10,22 @@
   <br />
   <p>{{post.body}} [Body of the post]</p> -->
 
-  {% for park in parks %}
-    <div class="card" style="width: 50rem; height: 50rem; border-radius: 5%;  align-items:center; cursor:pointer;
-    background-color:#7D8D87; text-align: center; margin: 0 auto; float: none; margin-bottom: 10px;
-    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    transition: all .55s ease-in-out;
-    ">
-      <div class="card-body">
-         <!-- random text until we get data to show -->
-         <h5 class="card-title" style="color:#D5DCDC;">{{park.name}}</h5>
-         <h5 class="user-name">{{user.username}} </h5>
-        <!-- adding random image until we can get data to show -->
-       <img class="post-img" style="border-radius: 17%; padding: 50px;" src="{{park.image}}" alt="park" />
-         <h5 class="card-text" style="color:#D5DCDC; font-family: Gill Sans, sans-serif;"">{{park.description}}</h5>
-      </div>
+  <div class="card" style="width: 50rem; height: 50rem; border-radius: 5%;  align-items:center; cursor:pointer;
+  background-color:#7D8D87; text-align: center; margin: 0 auto; float: none; margin-bottom: 10px;
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  transition: all .55s ease-in-out;
+  ">
+    <div class="card-body">
+       <!-- random text until we get data to show -->
+       <h5 class="card-title" style="color:#D5DCDC;">{{park.name}}</h5>
+       <h5 class="user-name">{{user.username}} </h5>
+      <!-- adding random image until we can get data to show -->
+     <img class="post-img" style="border-radius: 17%; padding: 50px;" src="{{park.image}}" alt="park" />
+       <h5 class="card-text" style="color:#D5DCDC; font-family: Gill Sans, sans-serif;"">{{park.description}}</h5>
     </div>
-    
+  </div>
+
 
 </body>
 
-{% endfor %} {% endblock %}
+{% endblock %}
