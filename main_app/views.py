@@ -138,3 +138,12 @@ class CityDetail(DetailView):
         context = super().get_context_data(**kwargs)
         context["parks"] = Park.objects.all()
         return context
+
+class Park_Detail(DetailView):
+    model = Park
+    template_name = "posts.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
