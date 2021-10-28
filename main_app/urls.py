@@ -28,8 +28,4 @@ urlpatterns = [
          views.PostUpdate.as_view(), name="post_update"),
     path('posts/<int:pk>/delete',
          views.PostDelete.as_view(), name="post_delete"),
-    # path('park_detail/<int:pk>',
-    #     views.Park_Detail.as_view(), name="posts"), # this is the one that's hitting right now
-
-
 ]
