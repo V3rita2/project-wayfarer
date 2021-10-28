@@ -22,13 +22,14 @@ urlpatterns = [
     #path for single city page
     path('cities/<int:pk>/', views.CityDetail.as_view(), name='city_detail'),
     #path for creating a post about a park park
-    path('posts/new', views.Create_Post.as_view(), name="create_post"),
+    path('posts/new/', views.Create_Post.as_view(), name="create_post"),
     #path for editing a park post need to confirm path with team 
-    path('cities/<int:pk>/update',
+    path('posts/<int:pk>/update',
          views.PostUpdate.as_view(), name="post_update"),
-    path('cities/<int:pk>/delete',
+    path('posts/<int:pk>/delete',
          views.PostDelete.as_view(), name="post_delete"),
     # path('park_detail/<int:pk>',
     #     views.Park_Detail.as_view(), name="posts"), # this is the one that's hitting right now
+
 
 ]
