@@ -17,16 +17,32 @@ from django.urls import reverse
 class Home(TemplateView):
     template_name = "home.html"
 
+
+# about view
+class About(TemplateView):
+    template_name = "about.html"
+
 # profile view
 
 
 class Profile(TemplateView):
     template_name = "profile.html"
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["parks"] = Park.objects.all()
+        return context
+
+
 
 # single post view for parks
 class Post(TemplateView):
     template_name = "posts.html"
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs) 
+        context["parks"] = Park.objects.all()
+        return context
 
     
 
@@ -129,4 +145,14 @@ class CityDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["parks"] = Park.objects.all()
+        return context
+
+
+class Park_Detail(DetailView):
+    model = Park
+    template_name = "posts.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        name = self.request.GET.get('name')
         return context
