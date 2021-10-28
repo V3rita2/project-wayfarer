@@ -34,18 +34,17 @@ background-size: cover;
   </a>
   <!-- Bootstrap ADD POST icon -->
 
-  {% for park in parks %}
+  {% for park in parks reversed %}
   <div class="row">
     <!-- <a href="" style="text-decoration: none"> -->
     <div class="card anchor" style="
         width: 18rem;
         padding: 20px;
         margin: 20px;
-
         background: #18413b;
       "
     >
-    <a href="{% url 'posts' park.pk %}">LINKY
+    <a href="{% url 'posts' park.pk %}">
 
       <img src="{{park.image}}" class="card-img-top" alt="{{park.name}}" />
       <div class="card-body">
