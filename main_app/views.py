@@ -80,7 +80,7 @@ class PostUpdate(UpdateView):
 class PostDelete(DeleteView):
     model = Park
     template_name = "post_delete_confirmation.html"
-    success_url = "/cities/"
+    success_url = "/cities/1/"
 
 
 # login view
