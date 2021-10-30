@@ -56,7 +56,7 @@ class Create_Post(CreateView):
     model = Park
     fields = ["name", "image", "description", "city", "user"]
     template_name = "create_post.html"
-    success_url = "/cities/"
+    success_url = "/cities/1/"
 
     # def get_success_url(self):
     #     return reverse('city_detail', kwargs={'pk': City.pk})
@@ -68,7 +68,7 @@ class PostUpdate(UpdateView):
     model = Park
     fields = ["name", "image", "description", "city", "user"]
     template_name = "post_update.html"
-    success_url = "/cities/"
+    success_url = "/cities/1/"
     # front end needs to create post_detail.html
 
     # def get_success_url(self):
@@ -80,7 +80,7 @@ class PostUpdate(UpdateView):
 class PostDelete(DeleteView):
     model = Park
     template_name = "post_delete_confirmation.html"
-    success_url = "/cities/"
+    success_url = "/cities/1/"
 
 
 # login view
