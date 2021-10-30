@@ -68,7 +68,7 @@ class PostUpdate(UpdateView):
     model = Park
     fields = ["name", "image", "description", "city", "user"]
     template_name = "post_update.html"
-    success_url = "/cities/"
+    success_url = "/cities/1/"
     # front end needs to create post_detail.html
 
     # def get_success_url(self):
