@@ -56,7 +56,7 @@ class Create_Post(CreateView):
     model = Park
     fields = ["name", "image", "description", "city", "user"]
     template_name = "create_post.html"
-    success_url = "/cities/"
+    success_url = "/cities/1/"
 
     # def get_success_url(self):
     #     return reverse('city_detail', kwargs={'pk': City.pk})
